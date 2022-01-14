@@ -558,7 +558,9 @@ namespace livox_ros
     }
     
     /**************** Modified for R2LIVE **********************/
-    if (!enable_imu_bag_)
+    UserRawConfig config;
+   
+    if (config.imu_rate != kImuFreq200Hz)
     {
       // if (g_ros_init_start_time < 0 && timestamp >= 0)
       if (skip_frame)
